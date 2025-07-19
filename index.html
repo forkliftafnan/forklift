@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مؤسسة افنان سلطان سعد العوجان للمقاولات العامة - تأجير رافعات بالرياض</title>
+  <meta name="description" content="شركة مؤسسة افنان العوجان للمقاولات العامة - خدمات تأجير الرافعات والمعدات الثقيلة في الرياض. إيجار رافعة شوكية شهري، تحميل وتنزيل بضائع، تنظيم مستودعات الرياض." />
+  <meta name="keywords" content="تأجير رافعات بالرياض, إيجار رافعة شوكية شهري, شركة تحميل وتنزيل بضائع, تنظيم مستودعات الرياض, معدات ثقيلة, رافعات تلسكوبية, كرينات متنقلة" />
+  <meta name="author" content="مؤسسة افنان سلطان سعد العوجان للمقاولات العامة" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="مؤسسة افنان العوجان - تأجير رافعات ومعدات ثقيلة بالرياض" />
+  <meta property="og:description" content="حلول رفع وتأجير موثوقة لمشاريعكم. خدمات تأجير المعدات الثقيلة والرافعات بجودة عالية في الرياض." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_SA" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  
+  <!-- Google Fonts for Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header-content">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="images/logo.png" alt="Afnan Al-Aujan Foundation" class="logo-img">
+          <div class="logo-text">
+            <h1 class="logo-title" data-ar="مؤسسة افنان العوجان" data-en="Afnan Al-Aujan Foundation">مؤسسة افنان العوجان</h1>
+            <p class="logo-subtitle" data-ar="حلول رفع وتأجير موثوقة لمشاريعكم" data-en="Reliable lifting and rental solutions for your projects">حلول رفع وتأجير موثوقة لمشاريعكم</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="nav-desktop">
+          <button type="button" class="nav-item active" data-section="home" data-ar="الرئيسية" data-en="Home">الرئيسية</button>
+          <button type="button" class="nav-item" data-section="services" data-ar="خدماتنا" data-en="Our Services">خدماتنا</button>
+          <button type="button" class="nav-item" data-section="fleet" data-ar="أسطولنا" data-en="Our Fleet">أسطولنا</button>
+          <button type="button" class="nav-item" data-section="contact" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button>
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="header-actions">
+          <button type="button" id="language-toggle" class="btn-language">
+            <i data-lucide="globe"></i>
+            <span class="language-text">EN</span>
+          </button>
+
+          <button type="button" class="btn-call" onclick="handleCall()">
+            <i data-lucide="phone"></i>
+            <span>اتصل الآن</span>
+          </button>
+
+          <button type="button" class="btn-whatsapp" onclick="handleWhatsApp()">
+            <i data-lucide="message-circle"></i>
+            <span>واتساب</span>
+          </button>
+
+          <button type="button" class="btn-quote" data-section="contact" data-ar="اطلب عرض سعر" data-en="Get Quote">اطلب عرض سعر</button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button type="button" id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-content">
+          <button type="button" class="nav-item-mobile active" data-section="home" data-ar="الرئيسية" data-en="Home">الرئيسية</button>
+          <button type="button" class="nav-item-mobile" data-section="services" data-ar="خدماتنا" data-en="Our Services">خدماتنا</button>
+          <button type="button" class="nav-item-mobile" data-section="fleet" data-ar="أسطولنا" data-en="Our Fleet">أسطولنا</button>
+          <button type="button" class="nav-item-mobile" data-section="contact" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button>
+
+          <div class="mobile-menu-actions">
+            <button type="button" id="mobile-language-toggle" class="btn-language-mobile">
+              <i data-lucide="globe"></i>
+              <span data-ar="English" data-en="العربية">English</span>
+            </button>
+
+            <div class="mobile-contact-buttons">
+              <button type="button" class="btn-call-mobile" onclick="handleCall()">
+                <i data-lucide="phone"></i>
+                <span>اتصل</span>
+              </button>
+
+              <button type="button" class="btn-whatsapp-mobile" onclick="handleWhatsApp()">
+                <i data-lucide="message-circle"></i>
+                <span>واتساب</span>
+              </button>
+            </div>
+
+            <button type="button" class="btn-quote-mobile" data-section="contact" data-ar="اطلب عرض سعر" data-en="Get Quote">اطلب عرض سعر</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-image"></div>
+      
+      <div class="hero-content">
+        <div class="container">
+          <div class="hero-text">
+            <h1 class="hero-title" data-ar="رافعات الرياض: شريككم الأمثل لتأجير المعدات الثقيلة والخدمات اللوجستية" data-en="Riyadh Cranes: Your Premier Partner for Heavy Equipment Rental and Logistics Services">
+              رافعات الرياض: شريككم الأمثل لتأجير المعدات الثقيلة والخدمات اللوجستية
+            </h1>
+            
+            <p class="hero-subtitle" data-ar="حلول رفع وتأجير موثوقة لمشاريعكم" data-en="Reliable lifting and rental solutions for your projects">
+              حلول رفع وتأجير موثوقة لمشاريعكم
+            </p>
+            
+            <p class="hero-description" data-ar="نقدم خدمات تأجير المعدات الثقيلة والرافعات بجودة عالية وأسعار تنافسية في الرياض والمناطق المجاورة، مع فريق مدرب ومتخصص" data-en="We provide high-quality heavy equipment and crane rental services at competitive prices in Riyadh and surrounding areas, with a trained and specialized team">
+              نقدم خدمات تأجير المعدات الثقيلة والرافعات بجودة عالية وأسعار تنافسية في الرياض والمناطق المجاورة، مع فريق مدرب ومتخصص
+            </p>
+            
+            <div class="hero-buttons">
+              <button type="button" class="btn-cta" data-section="contact">
+                <span data-ar="اطلب عرض سعر الآن" data-en="Get Quote Now">اطلب عرض سعر الآن</span>
+                <i data-lucide="arrow-left" class="arrow-icon"></i>
+              </button>
+
+              <div class="hero-contact-buttons">
+                <button type="button" class="btn-hero-call" onclick="handleCall()">
+                  <i data-lucide="phone"></i>
+                  <span>0508152107</span>
+                </button>
+
+                <button type="button" class="btn-hero-whatsapp" onclick="handleWhatsApp()">
+                  <i data-lucide="message-circle"></i>
+                  <span>واتساب</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Scroll Indicator -->
+          <div class="scroll-indicator">
+            <div class="scroll-mouse">
+              <div class="scroll-wheel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title" data-ar="لماذا تختارنا؟" data-en="Why Choose Us?">لماذا تختارنا؟</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon blue">
+              <i data-lucide="award"></i>
+            </div>
+            <h3 class="feature-title" data-ar="خبرة واسعة" data-en="Extensive Experience">خبرة واسعة</h3>
+            <p class="feature-description" data-ar="سنوات من الخبرة في مجال المقاولات والمعدات الثقيلة" data-en="Years of experience in contracting and heavy equipment">سنوات من الخبرة في مجال المقاولات والمعدات الثقيلة</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon green">
+              <i data-lucide="shield"></i>
+            </div>
+            <h3 class="feature-title" data-ar="جودة عالية" data-en="High Quality">جودة عالية</h3>
+            <p class="feature-description" data-ar="معدات حديثة ومتطورة مع صيانة دورية منتظمة" data-en="Modern and advanced equipment with regular maintenance">معدات حديثة ومتطورة مع صيانة دورية منتظمة</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon purple">
+              <i data-lucide="users"></i>
+            </div>
+            <h3 class="feature-title" data-ar="خدمة متميزة" data-en="Excellent Service">خدمة متميزة</h3>
+            <p class="feature-description" data-ar="فريق عمل محترف ومدرب على أعلى مستوى" data-en="Professional team trained to the highest standards">فريق عمل محترف ومدرب على أعلى مستوى</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon orange">
+              <i data-lucide="dollar-sign"></i>
+            </div>
+            <h3 class="feature-title" data-ar="أسعار تنافسية" data-en="Competitive Pricing">أسعار تنافسية</h3>
+            <p class="feature-description" data-ar="عروض مرنة تناسب جميع أحجام المشاريع" data-en="Flexible offers suitable for all project sizes">عروض مرنة تناسب جميع أحجام المشاريع</p>
+          </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number blue">10+</div>
+              <p class="stat-label">سنوات من الخبرة</p>
+            </div>
+            
+            <div class="stat-item">
+              <div class="stat-number green">100+</div>
+              <p class="stat-label">مشروع منجز بنجاح</p>
+            </div>
+            
+            <div class="stat-item">
+              <div class="stat-number orange">50+</div>
+              <p class="stat-label">معدة ثقيلة متاحة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title" data-ar="خدماتنا" data-en="Our Services">خدماتنا</h2>
+          <p class="section-description">نقدم مجموعة شاملة من الخدمات المتخصصة في مجال المعدات الثقيلة والخدمات اللوجستية</p>
+          <div class="section-divider orange"></div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-image">
+              <img src="images/forklift-main.jpg" alt="تأجير المعدات الثقيلة">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <i data-lucide="truck"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title" data-ar="تأجير المعدات الثقيلة" data-en="Heavy Equipment Rental">تأجير المعدات الثقيلة</h3>
+              <p class="service-description" data-ar="رافعات شوكية وتلسكوبية وكرينات بأحجام مختلفة" data-en="Forklifts, telehandlers, and cranes in various sizes">رافعات شوكية وتلسكوبية وكرينات بأحجام مختلفة</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>رافعات شوكية</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>رافعات تلسكوبية</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>كرينات متنقلة</span>
+                </div>
+              </div>
+              <button type="button" class="service-btn" data-section="contact">اطلب هذه الخدمة</button>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img src="images/telehandler.jpg" alt="خطط تأجير مرنة">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <i data-lucide="clock"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title" data-ar="خطط تأجير مرنة" data-en="Flexible Rental Plans">خطط تأجير مرنة</h3>
+              <p class="service-description" data-ar="إيجار يومي، أسبوعي، شهري، وسنوي" data-en="Daily, weekly, monthly, and yearly rentals">إيجار يومي، أسبوعي، شهري، وسنوي</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>إيجار يومي</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>إيجار شهري</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>إيجار سنوي</span>
+                </div>
+              </div>
+              <button type="button" class="service-btn" data-section="contact">اطلب هذه الخدمة</button>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img src="images/loading-operations.jpeg" alt="خدمات التحميل والتنزيل">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <i data-lucide="package"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title" data-ar="خدمات التحميل والتنزيل" data-en="Loading and Unloading Services">خدمات التحميل والتنزيل</h3>
+              <p class="service-description" data-ar="نقل آمن وكفء للبضائع والمعدات" data-en="Safe and efficient transport of goods and equipment">نقل آمن وكفء للبضائع والمعدات</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>تحميل آمن</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>نقل سريع</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>فريق مدرب</span>
+                </div>
+              </div>
+              <button type="button" class="service-btn" data-section="contact">اطلب هذه الخدمة</button>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image">
+              <img src="images/warehouse-organization.jpg" alt="حلول تنظيم المستودعات">
+              <div class="service-overlay"></div>
+              <div class="service-icon">
+                <i data-lucide="warehouse"></i>
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title" data-ar="حلول تنظيم المستودعات" data-en="Warehouse Organization Solutions">حلول تنظيم المستودعات</h3>
+              <p class="service-description" data-ar="تحسين كفاءة التخزين بمعدات متخصصة" data-en="Improving storage efficiency with specialized equipment">تحسين كفاءة التخزين بمعدات متخصصة</p>
+              <div class="service-features">
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>تنظيم المخزون</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>تحسين المساحة</span>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-dot"></div>
+                  <span>حلول ذكية</span>
+                </div>
+              </div>
+              <button type="button" class="service-btn" data-section="contact">اطلب هذه الخدمة</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="services-cta">
+          <h3 class="cta-title">هل تحتاج خدمة مخصصة؟</h3>
+          <p class="cta-description">نحن نقدم حلول مخصصة تناسب احتياجات مشروعك الخاص. تواصل معنا لمناقشة متطلباتك</p>
+          <button type="button" class="cta-btn" data-section="contact">تحدث مع خبرائنا</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="fleet-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title" data-ar="أسطولنا" data-en="Our Fleet">أسطولنا</h2>
+          <p class="section-description">تعرف على مجموعة متنوعة من المعدات الثقيلة المتاحة للإيجار</p>
+          <div class="section-divider blue"></div>
+        </div>
+
+        <!-- Fleet Categories -->
+        <div class="fleet-categories">
+          <button type="button" class="fleet-tab active" data-category="forklifts" data-ar="الرافعات الشوكية" data-en="Forklifts">الرافعات الشوكية</button>
+          <button type="button" class="fleet-tab" data-category="telehandlers" data-ar="الرافعات التلسكوبية" data-en="Telehandlers">الرافعات التلسكوبية</button>
+          <button type="button" class="fleet-tab" data-category="cranes" data-ar="الكرينات" data-en="Cranes">الكرينات</button>
+        </div>
+
+        <!-- Fleet Content -->
+        <div class="fleet-content">
+          <div class="fleet-category active" data-category="forklifts">
+            <div class="fleet-hero">
+              <div class="fleet-image">
+                <img src="images/forklift-main.jpg" alt="الرافعات الشوكية">
+                <div class="fleet-overlay"></div>
+                <div class="fleet-icon">
+                  <i data-lucide="truck"></i>
+                </div>
+              </div>
+              <div class="fleet-info">
+                <h3 class="fleet-title" data-ar="الرافعات الشوكية" data-en="Forklifts">الرافعات الشوكية</h3>
+                <p class="fleet-description" data-ar="أنواع وأحجام مختلفة لجميع احتياجاتكم" data-en="Various types and sizes for all your needs">أنواع وأحجام مختلفة لجميع احتياجاتكم</p>
+                <button type="button" class="fleet-btn" data-section="contact">احجز الآن</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="fleet-category" data-category="telehandlers">
+            <div class="fleet-hero">
+              <div class="fleet-image">
+                <img src="images/telehandler.jpg" alt="الرافعات التلسكوبية">
+                <div class="fleet-overlay"></div>
+                <div class="fleet-icon">
+                  <i data-lucide="truck"></i>
+                </div>
+              </div>
+              <div class="fleet-info">
+                <h3 class="fleet-title" data-ar="الرافعات التلسكوبية" data-en="Telehandlers">الرافعات التلسكوبية</h3>
+                <p class="fleet-description" data-ar="قدرات رفع ووصول متنوعة" data-en="Various lifting capacities and reach">قدرات رفع ووصول متنوعة</p>
+                <button type="button" class="fleet-btn" data-section="contact">احجز الآن</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="fleet-category" data-category="cranes">
+            <div class="fleet-hero">
+              <div class="fleet-image">
+                <img src="images/mobile-crane.webp" alt="الكرينات">
+                <div class="fleet-overlay"></div>
+                <div class="fleet-icon">
+                  <i data-lucide="truck"></i>
+                </div>
+              </div>
+              <div class="fleet-info">
+                <h3 class="fleet-title" data-ar="الكرينات" data-en="Cranes">الكرينات</h3>
+                <p class="fleet-description" data-ar="أوزان وأحجام مختلفة للمشاريع الكبيرة" data-en="Different weights and sizes for large projects">أوزان وأحجام مختلفة للمشاريع الكبيرة</p>
+                <button type="button" class="fleet-btn" data-section="contact">احجز الآن</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h2>
+          <p class="section-description">نحن هنا لخدمتكم على مدار الساعة. تواصلوا معنا للحصول على أفضل الحلول لمشاريعكم</p>
+          <div class="section-divider orange"></div>
+        </div>
+
+        <div class="contact-content">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3 class="contact-info-title" data-ar="معلومات التواصل" data-en="Contact Information">معلومات التواصل</h3>
+
+            <div class="contact-items">
+              <div class="contact-item phone">
+                <div class="contact-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h4 data-ar="هاتف" data-en="Phone">هاتف</h4>
+                  <p>0508152107</p>
+                </div>
+                <button type="button" class="contact-action" onclick="handleCall()">اتصل الآن</button>
+              </div>
+
+              <div class="contact-item whatsapp">
+                <div class="contact-icon">
+                  <i data-lucide="message-circle"></i>
+                </div>
+                <div class="contact-details">
+                  <h4 data-ar="واتساب" data-en="WhatsApp">واتساب</h4>
+                  <p>0541850468</p>
+                </div>
+                <button type="button" class="contact-action" onclick="handleWhatsApp()">راسلنا</button>
+              </div>
+
+              <div class="contact-item location">
+                <div class="contact-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>الموقع</h4>
+                  <p data-ar="الرياض، المملكة العربية السعودية" data-en="Riyadh, Kingdom of Saudi Arabia">الرياض، المملكة العربية السعودية</p>
+                </div>
+              </div>
+
+              <div class="contact-item hours">
+                <div class="contact-icon">
+                  <i data-lucide="clock"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>ساعات العمل</h4>
+                  <p>السبت - الخميس: 7:00 ص - 8:00 م</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-container">
+            <h3 class="contact-form-title" data-ar="نموذج التواصل" data-en="Contact Form">نموذج التواصل</h3>
+
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name" data-ar="الاسم" data-en="Name">الاسم</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="mobile" data-ar="رقم الجوال" data-en="Mobile Number">رقم الجوال</label>
+                <input type="tel" id="mobile" name="mobile" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email">
+              </div>
+
+              <div class="form-group">
+                <label for="details" data-ar="تفاصيل الطلب" data-en="Request Details">تفاصيل الطلب</label>
+                <textarea id="details" name="details" rows="5" required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit">
+                <span class="submit-text" data-ar="إرسال الطلب" data-en="Send Request">إرسال الطلب</span>
+                <span class="submit-loading">جاري الإرسال...</span>
+                <i data-lucide="send" class="submit-icon"></i>
+              </button>
+            </form>
+
+            <div id="form-success" class="form-success">
+              <i data-lucide="check-circle"></i>
+              <p>تم إرسال طلبكم بنجاح! سنتواصل معكم قريباً</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-company">
+          <div class="footer-logo">
+            <img src="images/logo.png" alt="Afnan Al-Aujan Foundation" class="footer-logo-img">
+            <div class="footer-logo-text">
+              <h3 data-ar="مؤسسة افنان العوجان" data-en="Afnan Al-Aujan Foundation">مؤسسة افنان العوجان</h3>
+              <p data-ar="حلول رفع وتأجير موثوقة لمشاريعكم" data-en="Reliable lifting and rental solutions for your projects">حلول رفع وتأجير موثوقة لمشاريعكم</p>
+            </div>
+          </div>
+
+          <p class="footer-description">
+            نحن شركة رائدة في مجال تأجير المعدات الثقيلة والخدمات اللوجستية في الرياض،
+            نقدم حلولاً متكاملة لجميع احتياجات مشاريعكم بأعلى معايير الجودة والموثوقية.
+          </p>
+
+          <div class="footer-contact-buttons">
+            <button type="button" class="footer-btn call" onclick="handleCall()">
+              <i data-lucide="phone"></i>
+              <span>0508152107</span>
+            </button>
+
+            <button type="button" class="footer-btn whatsapp" onclick="handleWhatsApp()">
+              <i data-lucide="message-circle"></i>
+              <span>واتساب</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-services">
+          <h4 data-ar="خدماتنا" data-en="Services">خدماتنا</h4>
+          <ul class="footer-links">
+            <li>تأجير الرافعات الشوكية</li>
+            <li>تأجير الرافعات التلسكوبية</li>
+            <li>تأجير الكرينات</li>
+            <li>خدمات التحميل والتنزيل</li>
+            <li>تنظيم المستودعات</li>
+            <li>استشارات لوجستية</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links-section">
+          <h4>روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><button type="button" class="footer-link" data-section="home" data-ar="الرئيسية" data-en="Home">الرئيسية</button></li>
+            <li><button type="button" class="footer-link" data-section="services" data-ar="خدماتنا" data-en="Our Services">خدماتنا</button></li>
+            <li><button type="button" class="footer-link" data-section="fleet" data-ar="أسطولنا" data-en="Our Fleet">أسطولنا</button></li>
+            <li><button type="button" class="footer-link" data-section="contact" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</button></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+          <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <i data-lucide="map-pin"></i>
+              <span data-ar="الرياض، المملكة العربية السعودية" data-en="Riyadh, Kingdom of Saudi Arabia">الرياض، المملكة العربية السعودية</span>
+            </div>
+            <div class="footer-contact-item">
+              <i data-lucide="phone"></i>
+              <span>0508152107</span>
+            </div>
+            <div class="footer-contact-item">
+              <i data-lucide="message-circle"></i>
+              <span>0541850468</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="footer-copyright">
+            <span data-ar="جميع الحقوق محفوظة" data-en="All Rights Reserved">جميع الحقوق محفوظة</span>
+            © 2024
+            <span data-ar="مؤسسة افنان سلطان سعد العوجان للمقاولات العامة" data-en="Afnan Sultan Saad Al-Aujan General Contracting Foundation">مؤسسة افنان سلطان سعد العوجان للمقاولات العامة</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
